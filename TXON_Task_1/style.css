@@ -8,11 +8,36 @@ body {
     margin: 0;
     padding: 0;
 }
-.wrapper{
-    height: 100vh;
-    overflow-y: auto;
+
+.wrapper {
+    /* height: 100vh; */
+    /* overflow-y: auto; */
     overflow-x: hidden;
     perspective: 1rem;
+}
+
+main {
+    position: relative;
+    /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+    /* width: 100%; */
+    transform-style: preserve-3d;
+    /* z-index: -1; */
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+
+    /* object-fit: cover; */
+    z-index: -1;
+    width: 100%;
+
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
 }
 
 .navbar {
@@ -58,29 +83,34 @@ body {
     margin: var(--margin0Auto);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 4.7rem;
+    /* padding-bottom: 4.7rem; */
 }
-.hero-left{
-    
+.grid-effect{
+    display: grid;
 }
+
+.hero-left {}
 
 .hero-left h1 {
     font-weight: 700;
     font-size: 5rem;
     margin-bottom: 0;
+    margin-top: 2.3rem !important;
 }
-
 .hero-left p {
     font-size: 1.1rem;
-
     margin-bottom: 0.7rem;
-
 }
-
+.hero-right{
+    /* display: flex;
+    justify-content: flex-end; */
+    width: 80%;
+}
 .hero-right img {
-    width: 15rem;
-    margin-top: 4rem;
+    /* margin: 0 auto;
+    
+    padding-bottom: 0 !important; */
+    
 }
 
 .hero-left button {
@@ -98,41 +128,48 @@ body {
 }
 
 
-.information-bg{
+.information-bg {
     width: 90%;
     margin: var(--margin0Auto);
 
     background: rgba(255, 255, 255, 0.5);
-box-shadow: 0px 1px 28px rgba(0, 0, 0, 0.11);
-border-radius: 30px;
+    box-shadow: 0px 1px 28px rgba(0, 0, 0, 0.11);
+    border-radius: 30px;
 }
-.information{
+
+.information {
 
     width: 77.8%;
     margin: var(--margin0Auto);
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 0;
-    
+
 
 }
-.information img{
+
+.information img {
     width: 10%;
 }
-.information a{
+
+.information a {
     text-decoration: none;
     font-weight: 600;
     color: black;
 }
-.information 
-.location,.programs,.membership{
+
+.information .location,
+.programs,
+.membership {
     display: flex;
     align-items: center;
 }
-.information .info-text{
+
+.information .info-text {
     margin-left: 1rem;
     align-items: center;
 }
+
 @media screen and (max-width: 835px) {
     .nav_menu a {
 

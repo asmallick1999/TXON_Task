@@ -3,6 +3,9 @@
     --margin0Auto: 0 auto;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    font-size: 100%;
+}
 
 body {
     margin: 0;
@@ -10,7 +13,7 @@ body {
 }
 
 .wrapper {
-    /* height: 100vh; */
+    height: 100vh;
     /* overflow-y: auto; */
     overflow-x: hidden;
     perspective: 1rem;
@@ -18,17 +21,14 @@ body {
 
 main {
     position: relative;
-    /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-    /* width: 100%; */
     transform-style: preserve-3d;
-    /* z-index: -1; */
+    z-index: -1;
 }
+
 
 .background {
     position: absolute;
-    height: 100%;
+    height: 100vh;
 
     /* object-fit: cover; */
     z-index: -1;
@@ -46,6 +46,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .logo {
@@ -81,38 +82,37 @@ main {
 .hero {
     width: var(--widthVal);
     margin: var(--margin0Auto);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     justify-content: space-between;
-    /* padding-bottom: 4.7rem; */
-}
-.grid-effect{
-    display: grid;
 }
 
-.hero-left {}
+
+/* hero left ---------------------------- */
+
+.hero-left {
+    width: 100%;
+}
 
 .hero-left h1 {
+    /* width: 100%; */
     font-weight: 700;
     font-size: 5rem;
     margin-bottom: 0;
     margin-top: 2.3rem !important;
+    line-height: 6rem;
+}
+.hero-left h1 span{
+    /* width: 100%; */
+    font-weight: 700;
+    font-size: 4rem;
+    
 }
 .hero-left p {
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
 }
-.hero-right{
-    /* display: flex;
-    justify-content: flex-end; */
-    width: 80%;
-}
-.hero-right img {
-    /* margin: 0 auto;
-    
-    padding-bottom: 0 !important; */
-    
-}
-
 .hero-left button {
     padding: 0.5rem 2rem;
     font-family: 'Poppins', sans-serif;
@@ -127,18 +127,25 @@ main {
     font-size: 1.5rem;
 }
 
+/* hero right ---------------------------- */
+.hero-right{
+    /* width: 100%; */
+}
+.hero-right img{
+    width: 80%;
+}
+
 
 .information-bg {
     width: 90%;
     margin: var(--margin0Auto);
-
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 1px 28px rgba(0, 0, 0, 0.11);
     border-radius: 30px;
+    margin-top: 9.3rem;
 }
 
 .information {
-
     width: 77.8%;
     margin: var(--margin0Auto);
     display: flex;
@@ -170,11 +177,60 @@ main {
     align-items: center;
 }
 
+.features{
+    width: var(--widthVal);
+    margin: var(--margin0Auto);
+}
+.features-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.features-div-text{
+    padding: 6rem;
+    text-align: center;
+}
+.features-div-text h2{
+    font-size: 2rem;
+    color: black;
+}
+.features-div-text p{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 9px 14px -2px rgba(0, 0, 0, 0.21), inset -11px -9px 10px -7px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(8.5px);
+    border-radius: 30px;
+    padding: 2rem 1rem;
+}
+.features-div-img img{
+    width: 27.5rem;
+    filter: drop-shadow(2px 5px 7px rgba(0, 0, 0, 0.25));
+    
+}
+.supplements-right img{
+    width: 25rem;
+}
+footer{
+    width: var(--widthVal);
+    margin: var(--margin0Auto);
+    margin-top: 7rem;
+}
+footer ul{
+    display: flex; 
+    list-style: none;
+    justify-content: space-around;
+    
+}
+footer ul li a{
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+}
+
 @media screen and (max-width: 835px) {
     .nav_menu a {
 
         margin: 0 1rem;
     }
+
 }
 
 /* @media screen and (max-width: 563px) {
@@ -183,3 +239,13 @@ main {
         margin: 0 0.5rem;
     }
 } */
+@media(max-width:998px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}

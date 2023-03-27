@@ -31,7 +31,17 @@ body{
     color: white;
     font-size: 20px;
     cursor: pointer;
-    /* margin: 10px; */
+    margin: 5px;
+}
+form span{
+    color: white;
+    font-size: 14px;
+}
+form span > span{
+    font-size: 9px;
+    vertical-align: super;
+    color: rgba(255, 0, 0, 0.893);
+    
 }
 
 form .display{
@@ -45,10 +55,16 @@ form .display input{
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+    border: 2px solid white;
+    color: silver;
 }
 
 form input.equal{
     width: 125px;
+}
+
+form input.coloredBtn {
+    color: rgb(159, 255, 255);
 }
 
 

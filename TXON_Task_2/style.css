@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    background-color: rgb(167, 211, 251);
+    background-color: rgb(226, 236, 245);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,7 +15,7 @@ body{
 }
 
 .calculator{
-    background-color: rgba(22, 22, 28, 0.861);
+    background-color: rgb(30, 32, 33);
     padding: 20px;
     border-radius: 10px;
 }
@@ -31,7 +31,7 @@ body{
     color: white;
     font-size: 20px;
     cursor: pointer;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 form .display{
@@ -45,6 +45,10 @@ form .display input{
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+}
+
+form input.equal{
+    width: 125px;
 }
 
 
